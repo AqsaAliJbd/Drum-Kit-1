@@ -52,6 +52,15 @@ for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
     let switchCase = this.innerHTML;
     makeSound(switchCase);
   });
+  // Handle touch events for Mobile Device
+  document.querySelectorAll(".drum")[i].addEventListener("touchstart", function () {
+    let switchCase = this.innerHTML;
+
+    makeSound(switchCase);
+    buttonAnimation(switchCase);
+  })
+
+}
 }
 document.addEventListener("keydown", function (event) {
   //  console.log(event);
